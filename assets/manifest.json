@@ -1,0 +1,255 @@
+{
+ "rooms": [
+  {
+   "id": "shop",
+   "name": "Mr. Han's Repair Shop",
+   "doneText": "The alley shop hums again — radio on, rice steaming, the fan turning. Mr. Han can open tomorrow.",
+   "base": "assets/models/room-shop.glb",
+   "baseHeight": 2.2,
+   "baseRotY": 0.7853981633974483,
+   "props": [
+    {
+     "id": "fan",
+     "name": "Desk fan",
+     "brokenNote": "A blade snapped off and the guard is bent.",
+     "fixedNote": "New blades, a straight guard, fresh mint paint.",
+     "h": 0.4,
+     "pos": [
+      -0.7799999999999999,
+      0,
+      -0.18
+     ],
+     "rotY": 0.312,
+     "broken": "assets/models/fan-broken.glb",
+     "fixed": "assets/models/fan-fixed.glb",
+     "srcBroken": "assets/src/fan-broken.jpg",
+     "srcFixed": "assets/src/fan-fixed.jpg"
+    },
+    {
+     "id": "radio",
+     "name": "Transistor radio",
+     "brokenNote": "Cracked grille, bent antenna, a knob missing.",
+     "fixedNote": "Cherry-red case and a straight antenna — music again.",
+     "h": 0.4,
+     "pos": [
+      -0.08,
+      0,
+      -0.18
+     ],
+     "rotY": 0.032,
+     "broken": "assets/models/radio-broken.glb",
+     "fixed": "assets/models/radio-fixed.glb",
+     "srcBroken": "assets/src/radio-broken.jpg",
+     "srcFixed": "assets/src/radio-fixed.jpg"
+    },
+    {
+     "id": "ricecooker",
+     "name": "Rice cooker",
+     "brokenNote": "The lid hangs off one hinge.",
+     "fixedNote": "Lid snug, steam vent shining — rice is on.",
+     "h": 0.4,
+     "pos": [
+      0.62,
+      0,
+      -0.18
+     ],
+     "rotY": -0.248,
+     "broken": "assets/models/ricecooker-broken.glb",
+     "fixed": "assets/models/ricecooker-fixed.glb",
+     "srcBroken": "assets/src/ricecooker-broken.jpg",
+     "srcFixed": "assets/src/ricecooker-fixed.jpg"
+    },
+    {
+     "id": "phone",
+     "name": "Rotary phone",
+     "brokenNote": "The handset is split in two.",
+     "fixedNote": "Jade-green and ringing.",
+     "h": 0.4,
+     "pos": [
+      -0.58,
+      0,
+      0.62
+     ],
+     "rotY": 0.23199999999999998,
+     "broken": "assets/models/phone-broken.glb",
+     "fixed": "assets/models/phone-fixed.glb",
+     "srcBroken": "assets/src/phone-broken.jpg",
+     "srcFixed": "assets/src/phone-fixed.jpg"
+    },
+    {
+     "id": "lamp",
+     "name": "Desk lamp",
+     "brokenNote": "Bent arm, shattered bulb.",
+     "fixedNote": "A warm pool of light over the workbench.",
+     "h": 0.4,
+     "pos": [
+      0.12,
+      0,
+      0.62
+     ],
+     "rotY": -0.048,
+     "broken": "assets/models/lamp-broken.glb",
+     "fixed": "assets/models/lamp-fixed.glb",
+     "srcBroken": "assets/src/lamp-broken.jpg",
+     "srcFixed": "assets/src/lamp-fixed.jpg"
+    },
+    {
+     "id": "clock",
+     "name": "Wall clock",
+     "brokenNote": "Cracked glass, the minute hand is gone.",
+     "fixedNote": "Ticking, with both hands home.",
+     "h": 0.4,
+     "pos": [
+      0.82,
+      0,
+      0.62
+     ],
+     "rotY": -0.328,
+     "broken": "assets/models/clock-broken.glb",
+     "fixed": "assets/models/clock-fixed.glb",
+     "srcBroken": "assets/src/clock-broken.jpg",
+     "srcFixed": "assets/src/clock-fixed.jpg"
+    }
+   ]
+  },
+  {
+   "id": "hanok",
+   "name": "Hanok Study",
+   "doneText": "Ink is ground, tea is poured and the lantern glows behind the paper doors.",
+   "base": "assets/models/room-hanok.glb",
+   "baseHeight": 2.2,
+   "baseRotY": 0.7853981633974483,
+   "props": [
+    {
+     "id": "desk",
+     "name": "Writing desk",
+     "brokenNote": "One leg snapped, the lacquer cracked.",
+     "fixedNote": "Steady on four legs, glossy red lacquer.",
+     "h": 0.4,
+     "pos": [
+      -0.7799999999999999,
+      0,
+      -0.18
+     ],
+     "rotY": 0.312,
+     "broken": "assets/models/desk-broken.glb",
+     "fixed": "assets/models/desk-fixed.glb",
+     "srcBroken": "assets/src/desk-broken.jpg",
+     "srcFixed": "assets/src/desk-fixed.jpg"
+    },
+    {
+     "id": "inkstone",
+     "name": "Ink stone set",
+     "brokenNote": "The stone is split, the brush splayed.",
+     "fixedNote": "Smooth stone, wet ink, a pointed brush.",
+     "h": 0.4,
+     "pos": [
+      -0.08,
+      0,
+      -0.18
+     ],
+     "rotY": 0.032,
+     "broken": "assets/models/inkstone-broken.glb",
+     "fixed": "assets/models/inkstone-fixed.glb",
+     "srcBroken": "assets/src/inkstone-broken.jpg",
+     "srcFixed": "assets/src/inkstone-fixed.jpg"
+    },
+    {
+     "id": "lantern",
+     "name": "Paper lantern",
+     "brokenNote": "Torn paper, crooked frame.",
+     "fixedNote": "Fresh hanji glowing orange.",
+     "h": 0.4,
+     "pos": [
+      0.62,
+      0,
+      -0.18
+     ],
+     "rotY": -0.248,
+     "broken": "assets/models/lantern-broken.glb",
+     "fixed": "assets/models/lantern-fixed.glb",
+     "srcBroken": "assets/src/lantern-broken.jpg",
+     "srcFixed": "assets/src/lantern-fixed.jpg"
+    },
+    {
+     "id": "teapot",
+     "name": "Celadon tea set",
+     "brokenNote": "Chipped spout, a broken cup.",
+     "fixedNote": "Pale jade glaze, two matching cups.",
+     "h": 0.4,
+     "pos": [
+      -0.58,
+      0,
+      0.62
+     ],
+     "rotY": 0.23199999999999998,
+     "broken": "assets/models/teapot-broken.glb",
+     "fixed": "assets/models/teapot-fixed.glb",
+     "srcBroken": "assets/src/teapot-broken.jpg",
+     "srcFixed": "assets/src/teapot-fixed.jpg"
+    },
+    {
+     "id": "screen",
+     "name": "Folding screen",
+     "brokenNote": "Torn, faded panels.",
+     "fixedNote": "Plum blossoms bright again.",
+     "h": 0.4,
+     "pos": [
+      0.82,
+      0,
+      0.62
+     ],
+     "rotY": -0.328,
+     "broken": "assets/models/screen-broken.glb",
+     "fixed": "assets/models/screen-fixed.glb",
+     "srcBroken": "assets/src/screen-broken.jpg",
+     "srcFixed": "assets/src/screen-fixed.jpg"
+    }
+   ]
+  },
+  {
+   "id": "sea",
+   "name": "Seaside Lab",
+   "doneText": "The lamp is lit, the telescope points at the tide and the little ship stands in its bottle.",
+   "base": "assets/models/room-sea.glb",
+   "baseHeight": 2.2,
+   "baseRotY": 0.7853981633974483,
+   "props": [
+    {
+     "id": "telescope",
+     "name": "Brass telescope",
+     "brokenNote": "Dented tube, cracked lens.",
+     "fixedNote": "Polished brass, clear lens.",
+     "h": 0.4,
+     "pos": [
+      0,
+      0,
+      -0.18
+     ],
+     "rotY": 0,
+     "broken": "assets/models/telescope-broken.glb",
+     "fixed": "assets/models/telescope-fixed.glb",
+     "srcBroken": "assets/src/telescope-broken.jpg",
+     "srcFixed": "assets/src/telescope-fixed.jpg"
+    },
+    {
+     "id": "oillamp",
+     "name": "Hurricane lamp",
+     "brokenNote": "Smashed chimney, no flame.",
+     "fixedNote": "A warm flame behind clean glass.",
+     "h": 0.4,
+     "pos": [
+      0,
+      0,
+      0.62
+     ],
+     "rotY": 0,
+     "broken": "assets/models/oillamp-broken.glb",
+     "fixed": "assets/models/oillamp-fixed.glb",
+     "srcBroken": "assets/src/oillamp-broken.jpg",
+     "srcFixed": "assets/src/oillamp-fixed.jpg"
+    }
+   ]
+  }
+ ]
+}

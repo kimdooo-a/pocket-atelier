@@ -1,0 +1,4 @@
+tools/lux3d-results.json
+tools/batch*.txt
+node_modules/
+report/

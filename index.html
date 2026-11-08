@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pocket Atelier — Tiny Rooms, Real 3D</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<header id="hud">
+  <div class="brand">Pocket Atelier</div>
+  <div id="roomName">—</div>
+  <div class="progress"><div id="bar"></div></div>
+  <div id="count">0 / 0 repaired</div>
+</header>
+
+<nav id="rooms"></nav>
+
+<div id="hint">Click a broken object and hold to repair it. Drag to turn the room.</div>
+
+<div id="holdRing" hidden><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" class="bg"/><circle cx="22" cy="22" r="18" class="fg" id="ringFg"/></svg></div>
+
+<aside id="card" hidden>
+  <div class="cardTitle" id="cardTitle"></div>
+  <div class="cardBody" id="cardBody"></div>
+</aside>
+
+<div id="done" hidden>
+  <div class="doneTitle">Room restored</div>
+  <div class="doneBody" id="doneBody"></div>
+  <button id="nextRoom">Next room →</button>
+</div>
+
+<button id="logBtn">Asset log</button>
+<section id="log" hidden>
+  <div class="logHead">How each prop was made <button id="logClose">×</button></div>
+  <div id="logList"></div>
+</section>
+
+<div id="loading">Loading the room…</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
