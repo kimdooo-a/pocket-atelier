@@ -7,6 +7,7 @@
    "base": "assets/models/room-shop.glb",
    "baseHeight": 2.2,
    "baseRotY": 0.7853981633974483,
+   "rayY": 0.95,
    "props": [
     {
      "id": "fan",
@@ -119,6 +120,7 @@
    "base": "assets/models/room-hanok.glb",
    "baseHeight": 2.2,
    "baseRotY": 0.7853981633974483,
+   "rayY": 0.95,
    "props": [
     {
      "id": "desk",
@@ -214,6 +216,7 @@
    "base": "assets/models/room-sea.glb",
    "baseHeight": 2.2,
    "baseRotY": 0.7853981633974483,
+   "rayY": 0.5,
    "props": [
     {
      "id": "telescope",
@@ -222,15 +225,66 @@
      "fixedNote": "Polished brass, clear lens.",
      "h": 0.4,
      "pos": [
+      -0.53,
       0,
-      0,
-      -0.18
+      0
      ],
-     "rotY": 0,
+     "rotY": 0.21200000000000002,
      "broken": "assets/models/telescope-broken.glb",
      "fixed": "assets/models/telescope-fixed.glb",
      "srcBroken": "assets/src/telescope-broken.jpg",
      "srcFixed": "assets/src/telescope-fixed.jpg"
+    },
+    {
+     "id": "globe",
+     "name": "Globe",
+     "brokenNote": "Peeling map, off its axis.",
+     "fixedNote": "Spinning on a brass axis.",
+     "h": 0.4,
+     "pos": [
+      -0.08,
+      0,
+      0
+     ],
+     "rotY": 0.032,
+     "broken": "assets/models/globe-broken.glb",
+     "fixed": "assets/models/globe-fixed.glb",
+     "srcBroken": "assets/src/globe-broken.jpg",
+     "srcFixed": "assets/src/globe-fixed.jpg"
+    },
+    {
+     "id": "helmet",
+     "name": "Diving helmet",
+     "brokenNote": "Green corrosion, cracked window.",
+     "fixedNote": "Shining copper, clear windows.",
+     "h": 0.4,
+     "pos": [
+      0.37,
+      0,
+      0
+     ],
+     "rotY": -0.148,
+     "broken": "assets/models/helmet-broken.glb",
+     "fixed": "assets/models/helmet-fixed.glb",
+     "srcBroken": "assets/src/helmet-broken.jpg",
+     "srcFixed": "assets/src/helmet-fixed.jpg"
+    },
+    {
+     "id": "shipbottle",
+     "name": "Ship in a bottle",
+     "brokenNote": "Cracked glass, collapsed masts.",
+     "fixedNote": "White sails standing tall.",
+     "h": 0.4,
+     "pos": [
+      -0.33,
+      0,
+      0.62
+     ],
+     "rotY": 0.132,
+     "broken": "assets/models/shipbottle-broken.glb",
+     "fixed": "assets/models/shipbottle-fixed.glb",
+     "srcBroken": "assets/src/shipbottle-broken.jpg",
+     "srcFixed": "assets/src/shipbottle-fixed.jpg"
     },
     {
      "id": "oillamp",
@@ -239,11 +293,11 @@
      "fixedNote": "A warm flame behind clean glass.",
      "h": 0.4,
      "pos": [
-      0,
+      0.5700000000000001,
       0,
       0.62
      ],
-     "rotY": 0,
+     "rotY": -0.22800000000000004,
      "broken": "assets/models/oillamp-broken.glb",
      "fixed": "assets/models/oillamp-fixed.glb",
      "srcBroken": "assets/src/oillamp-broken.jpg",

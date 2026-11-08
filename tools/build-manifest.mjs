@@ -37,18 +37,18 @@ for (const r of ROOMS) {
   if (!ready.length) continue;
   const n = ready.length;
   const props = ready.map(([id, name, b, f], i) => {
-    // 방 바탕 앞쪽에 반원으로 놓는다
-    // 방 바닥 위 두 줄(뒤 줄 3 · 앞 줄 나머지)
+    // 방 바닥 위 두 줄(뒤 줄 3 · 앞 줄 나머지) — 실내 폭이 방마다 달라 펼침 폭(S)을 따로 둔다
+    const S = r.id === 'sea' ? 0.45 : 0.7, ZB = r.id === 'sea' ? 0.0 : -0.18;
     const back = Math.ceil(n / 2), row = i < back ? 0 : 1, k = row ? i - back : i, m = row ? n - back : back;
-    const x = m === 1 ? 0 : -0.7 + (1.4 * k) / (m - 1) + (row ? 0.12 : -0.08);
-    const z = row ? 0.62 : -0.18;
+    const x = m === 1 ? 0 : -S + (2 * S * k) / (m - 1) + (row ? 0.12 : -0.08);
+    const z = row ? 0.62 : ZB;
     return { id, name, brokenNote: b, fixedNote: f, h: 0.4,
       pos: [x, FLOOR, z], rotY: -x * 0.4,
       broken: `assets/models/${id}-broken.glb`, fixed: `assets/models/${id}-fixed.glb`,
       srcBroken: `assets/src/${id}-broken.jpg`, srcFixed: `assets/src/${id}-fixed.jpg` };
   });
   const base = ok(`room-${r.id}`) ? `assets/models/room-${r.id}.glb` : null;
-  out.rooms.push({ id: r.id, name: r.name, doneText: r.doneText, base, baseHeight: 2.2, baseRotY: Math.PI / 4, props });
+  out.rooms.push({ id: r.id, name: r.name, doneText: r.doneText, base, baseHeight: 2.2, baseRotY: Math.PI / 4, rayY: r.id === 'sea' ? 0.5 : 0.95, props });
 }
 writeFileSync('assets/manifest.json', JSON.stringify(out, null, 1));
 console.log(out.rooms.map((r) => `${r.id}: ${r.props.length} props${r.base ? ' + base' : ''}`).join('\n'));

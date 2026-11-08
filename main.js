@@ -78,8 +78,28 @@ async function viewOne(key) {
   $('loading').remove();
 }
 
+// ?shots=1 — 보고서용 컷을 한 번에 찍어 로컬 서버에 저장한다(개발용)
+async function shootAll() {
+  document.querySelectorAll('#hud,#rooms,#hint,#logBtn').forEach((e) => (e.hidden = true));
+  $('loading').remove();
+  const man = await (await fetch('assets/manifest.json')).json();
+  const keys = man.rooms.flatMap((r) => r.props.flatMap((p) => [p.id + '-broken', p.id + '-fixed']));
+  renderer.setSize(900, 900, false); camera.aspect = 1; camera.updateProjectionMatrix();
+  warm.intensity = 2; sun.intensity = 1; hemi.intensity = 0.5;
+  const log = [];
+  for (const k of keys) {
+    const m = fit(await loadGLB(`assets/models/${k}.glb`), 1);
+    scene.add(m);
+    camera.position.set(1.75, 1.2, 1.75); controls.target.set(0, 0.48, 0);
+    log.push(k + ' ' + (await window.__shot(k + '.png')));
+    scene.remove(m);
+  }
+  return log;
+}
+
 async function init() {
   if (VIEW) return viewOne(VIEW);
+  if (new URLSearchParams(location.search).get('shots')) { window.__shotsDone = await shootAll(); return; }
   manifest = await (await fetch('assets/manifest.json')).json();
   buildRoomNav();
   buildLog();
@@ -117,7 +137,7 @@ async function enterRoom(i) {
     // 방 바닥 높이를 그 자리에서 잰다(방마다 받침 두께가 다르다)
     let y = p.pos[1] || 0;
     if (holder) {
-      down.set(new THREE.Vector3(p.pos[0], 0.95, p.pos[2]), new THREE.Vector3(0, -1, 0));
+      down.set(new THREE.Vector3(p.pos[0], r.rayY || 0.95, p.pos[2]), new THREE.Vector3(0, -1, 0));
       const hit = down.intersectObject(holder, true)[0];
       if (hit) y = hit.point.y;
     }
