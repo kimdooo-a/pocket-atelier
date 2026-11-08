@@ -119,6 +119,7 @@ function markNav() { [...$('rooms').children].forEach((b, i) => b.classList.togg
 
 async function enterRoom(i) {
   roomIndex = i; markNav();
+  camera.position.set(0.4, 2.3, 3.6); controls.target.set(0, 0.55, 0.2); controls.update();
   $('done').hidden = true; $('card').hidden = true;
   if (room) scene.remove(room);
   props.length = 0;
